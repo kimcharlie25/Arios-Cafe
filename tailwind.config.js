@@ -4,6 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
+        // New elegant branding
+        primary: {
+          base: '#F0EFEA',
+          accent: '#85A3B3',
+        },
+        secondary: {
+          accent: '#394C5D',
+        },
+        neutral: {
+          accent: '#A99A8E',
+        },
+        // Legacy ramen colors (for admin)
         ramen: {
           red: '#D7263D',
           dark: '#0B0A0A',
@@ -17,6 +29,7 @@ export default {
         }
       },
       fontFamily: {
+        'verdana': ['Verdana', 'Geneva', 'sans-serif'],
         'pretendard': ['Pretendard', 'system-ui', 'sans-serif'],
         'noto-kr': ['Noto Serif KR', 'serif']
       },
@@ -24,7 +37,8 @@ export default {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.4s ease-out',
         'bounce-gentle': 'bounceGentle 0.6s ease-out',
-        'scale-in': 'scaleIn 0.3s ease-out'
+        'scale-in': 'scaleIn 0.3s ease-out',
+        'shimmer': 'shimmer 2s infinite'
       },
       keyframes: {
         fadeIn: {
@@ -43,6 +57,10 @@ export default {
         scaleIn: {
           '0%': { transform: 'scale(0.95)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' }
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-1000px 0' },
+          '100%': { backgroundPosition: '1000px 0' }
         }
       }
     },
